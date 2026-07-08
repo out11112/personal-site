@@ -613,7 +613,8 @@ html[data-theme='dark'] .theme-toggle-icon {
 
 .about-grid .lead-text {
   color: var(--muted);
-  font-style: italic;
+  font-synthesis: style;
+  font-style: oblique 12deg;
 }
 
 .hero-actions,
