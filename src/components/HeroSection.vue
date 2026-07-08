@@ -13,7 +13,6 @@ defineProps({
       <p class="eyebrow">Vue 3 + Vite Personal Website</p>
       <h1>{{ profile.name }}</h1>
       <p class="hero-role">{{ profile.role }}</p>
-      <p class="hero-intro">{{ profile.intro }}</p>
 
       <div class="hero-actions">
         <a class="button button-primary" href="#projects">查看项目</a>
