@@ -17,7 +17,10 @@ defineProps({
     <div class="about-grid">
       <p class="lead-text">{{ profile.intro }}</p>
       <ul class="highlight-list">
-        <li v-for="item in profile.highlights" :key="item">{{ item }}</li>
+        <li v-for="item in profile.highlights" :key="item.label">
+          <strong>{{ item.label }}：</strong>
+          <span>{{ item.text }}</span>
+        </li>
       </ul>
     </div>
   </section>
