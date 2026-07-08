@@ -445,6 +445,11 @@ ol {
   box-shadow: 0 10px 24px rgba(31, 122, 92, 0.22);
 }
 
+.brand-logo {
+  display: block;
+  object-fit: cover;
+}
+
 .nav-links {
   gap: 6px;
   padding: 6px;
