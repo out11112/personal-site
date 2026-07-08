@@ -408,6 +408,16 @@ ol {
   backdrop-filter: blur(18px);
 }
 
+.site-header::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc((100% - 100vw) / 2);
+  border-bottom: 1px solid rgba(221, 227, 223, 0.72);
+  background: rgba(247, 244, 239, 0.76);
+  backdrop-filter: blur(18px);
+}
+
 .brand,
 .nav-links,
 .hero-actions,
@@ -471,9 +481,9 @@ ol {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
   gap: 42px;
-  align-items: end;
-  min-height: calc(100dvh - 72px);
-  padding: 72px 0 84px;
+  align-items: center;
+  min-height: calc(86dvh - 72px);
+  padding: 28px 0 64px;
 }
 
 .hero-copy {
