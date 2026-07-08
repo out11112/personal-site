@@ -14,12 +14,42 @@ export const profile = {
 }
 
 export const skills = [
-  { name: 'Java / Spring Boot', level: 88, type: '后端开发' },
-  { name: 'MyBatis-Plus / REST API', level: 84, type: '接口开发' },
-  { name: 'MySQL', level: 82, type: '数据库设计' },
-  { name: 'Vue 3 / Element Plus', level: 80, type: '前端开发' },
-  { name: 'WebSocket / WebRTC', level: 76, type: '实时通信' },
-  { name: 'Git / Linux / 部署', level: 78, type: '工程实践' },
+  {
+    name: 'Java / Spring Boot',
+    type: '后端开发',
+    level: '熟悉',
+    detail: '能够完成接口开发、业务逻辑实现、项目配置、调试和基础部署。',
+  },
+  {
+    name: 'MyBatis-Plus / REST API',
+    type: '接口开发',
+    level: '熟悉',
+    detail: '熟悉常见 CRUD、分页查询、条件查询和前后端接口联调。',
+  },
+  {
+    name: 'MySQL',
+    type: '数据库设计',
+    level: '熟悉',
+    detail: '能够进行表结构设计、关联查询、索引使用和基础 SQL 优化。',
+  },
+  {
+    name: 'Vue 3 / Element Plus',
+    type: '前端开发',
+    level: '掌握',
+    detail: '能够开发前后端分离页面，完成表单、列表、弹窗和接口交互。',
+  },
+  {
+    name: 'WebSocket / WebRTC',
+    type: '实时通信',
+    level: '掌握',
+    detail: '具备实时聊天、消息推送和频道语音功能的项目实践经验。',
+  },
+  {
+    name: 'Git / Linux / 部署',
+    type: '工程实践',
+    level: '掌握',
+    detail: '熟悉 Git 基础协作、Linux 常用命令和前后端项目部署流程。',
+  },
 ]
 
 export const projects = [

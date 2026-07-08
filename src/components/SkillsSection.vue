@@ -20,10 +20,8 @@ defineProps({
           <h3>{{ skill.name }}</h3>
           <span>{{ skill.type }}</span>
         </div>
-        <div class="skill-meter" aria-hidden="true">
-          <span :style="{ width: `${skill.level}%` }"></span>
-        </div>
-        <p>{{ skill.level }}%</p>
+        <p class="skill-level">{{ skill.level }}</p>
+        <p class="skill-detail">{{ skill.detail }}</p>
       </article>
     </div>
   </section>
