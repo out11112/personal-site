@@ -405,7 +405,7 @@ ol {
   min-height: 72px;
   margin: 0 auto;
   padding: 14px 0;
-  backdrop-filter: blur(18px);
+  backdrop-filter: none;
 }
 
 .site-header::before {
@@ -413,9 +413,10 @@ ol {
   position: absolute;
   z-index: -1;
   inset: 0 calc((100% - 100vw) / 2);
-  border-bottom: 1px solid rgba(221, 227, 223, 0.72);
-  background: rgba(247, 244, 239, 0.76);
-  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(221, 227, 223, 0.82);
+  background: rgba(247, 244, 239, 0.96);
+  backdrop-filter: none;
+  box-shadow: 0 8px 24px rgba(23, 32, 27, 0.04);
 }
 
 .brand,
