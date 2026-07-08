@@ -356,11 +356,13 @@ html[data-theme='dark'] {
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
 body {
   min-width: 320px;
+  overflow-x: clip;
   color: var(--muted);
   background:
     linear-gradient(135deg, var(--page-gradient-a), transparent 36%),
