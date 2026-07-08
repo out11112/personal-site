@@ -1,9 +1,9 @@
 export const profile = {
   name: '刘政',
   role: '后端开发 / 全栈开发方向',
-  location: '中国',
+  location: '浙江杭州',
   email: '2419554425@qq.com',
-  github: 'https://github.com/yourname',
+  github: 'https://github.com/out11112',
   intro:
     '我关注前端工程化、交互体验和 Web 产品落地，能够使用 Vue 3、Vite 和现代 CSS 快速完成从需求拆解到线上部署的完整流程。',
   highlights: [
