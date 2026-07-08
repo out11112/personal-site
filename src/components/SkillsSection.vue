@@ -10,8 +10,8 @@ defineProps({
 <template>
   <section id="skills" class="content-section section-shell">
     <div class="section-heading">
-      <p class="eyebrow">Skills</p>
-      <h2>技术栈</h2>
+      <p class="eyebrow">Abilities</p>
+      <h2>技术能力</h2>
     </div>
 
     <div class="skills-grid">

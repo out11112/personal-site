@@ -5,7 +5,7 @@ export const profile = {
   email: '2419554425@qq.com',
   github: 'https://github.com/out11112',
   intro:
-    '本科就读于上海海洋大学信息学院，所学专业为计算机科学与技术，GPA 3.29/4。主修课程包括数据结构与算法、Java 框架编程、Linux 操作系统、数据库原理、Python程序设计。学习能力强，工作态度认真，具备良好的团队合作精神。具备较强的学习能力和工程实践能力，熟悉Java后端开发、前后端分离项目开发流程，能够独立完成需求分析、功能设计、编码实现、调试部署等工作。熟悉 Spring Boot、MyBatis-Plus、MySQL、Vue 等技术栈，具备良好的问题定位能力和持续优化意识，能够根据实际反馈不断改进系统功能和用户体验。',
+    '本科就读于上海海洋大学信息学院，所学专业为计算机科学与技术，GPA 3.29/4。主修课程包括数据结构与算法、Java 框架编程、Linux 操作系统、数据库原理、Python程序设计。学习能力强，工作态度认真，具备良好的团队合作精神。具备较强的学习能力和工程实践能力，熟悉Java后端开发、前后端分离项目开发流程，能够独立完成需求分析、功能设计、编码实现、调试部署等工作，具备良好的问题定位能力和持续优化意识，能够根据实际反馈不断改进系统功能和用户体验。',
   highlights: [
     { label: '语言能力', text: '通过大学英语CET4、CET6' },
     { label: '专业技能', text: '计算机程序设计三级证书，蓝桥杯省级三等奖' },
@@ -14,12 +14,12 @@ export const profile = {
 }
 
 export const skills = [
-  { name: 'Vue 3', level: 86, type: '前端框架' },
-  { name: 'JavaScript', level: 82, type: '开发语言' },
-  { name: 'HTML5 / CSS3', level: 88, type: '页面基础' },
-  { name: 'Vite', level: 78, type: '构建工具' },
-  { name: 'Git / GitHub', level: 74, type: '协作工具' },
-  { name: 'Vercel', level: 70, type: '部署平台' },
+  { name: 'Java / Spring Boot', level: 88, type: '后端开发' },
+  { name: 'MyBatis-Plus / REST API', level: 84, type: '接口开发' },
+  { name: 'MySQL', level: 82, type: '数据库设计' },
+  { name: 'Vue 3 / Element Plus', level: 80, type: '前端开发' },
+  { name: 'WebSocket / WebRTC', level: 76, type: '实时通信' },
+  { name: 'Git / Linux / 部署', level: 78, type: '工程实践' },
 ]
 
 export const projects = [

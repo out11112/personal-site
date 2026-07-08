@@ -14,8 +14,8 @@ import { aiUsage, profile, projects, skills } from './data/profile'
   <main>
     <HeroSection :profile="profile" />
     <AboutSection :profile="profile" />
-    <ProjectsSection :projects="projects" />
     <SkillsSection :skills="skills" />
+    <ProjectsSection :projects="projects" />
     <AiUsageSection :ai-usage="aiUsage" />
     <ContactSection :profile="profile" />
   </main>
