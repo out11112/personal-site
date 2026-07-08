@@ -611,6 +611,11 @@ html[data-theme='dark'] .theme-toggle-icon {
   font-size: 18px;
 }
 
+.about-grid .lead-text {
+  color: var(--muted);
+  font-style: italic;
+}
+
 .hero-actions,
 .contact-actions {
   gap: 12px;
