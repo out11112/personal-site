@@ -12,7 +12,7 @@ defineProps({
     <div>
       <p class="eyebrow">Contact</p>
       <h2>期待进一步交流</h2>
-      <p>如果你正在查看这份笔试作品，可以通过以下方式了解源码和线上效果。</p>
+      <p>如果你正在查看这篇博客，可以通过右侧方式了解源码和线上效果。</p>
     </div>
 
     <div class="contact-actions">

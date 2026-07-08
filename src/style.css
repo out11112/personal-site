@@ -363,7 +363,7 @@ h3 {
 h1 {
   max-width: 780px;
   margin: 0;
-  font-size: clamp(44px, 7vw, 82px);
+  font-size: clamp(40px, 5.8vw, 70px);
   line-height: 0.98;
 }
 
@@ -479,8 +479,8 @@ ol {
 
 .hero-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  gap: 42px;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
   align-items: center;
   min-height: auto;
   padding: 28px 0 44px;

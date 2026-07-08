@@ -3,7 +3,7 @@ const links = [
   { label: '关于我', href: '#about' },
   { label: '技术栈', href: '#skills' },
   { label: '项目', href: '#projects' },
-  { label: 'AI 说明', href: '#ai' },
+  { label: 'AI说明', href: '#ai' },
   { label: '联系', href: '#contact' },
 ]
 </script>
