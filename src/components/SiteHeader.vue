@@ -11,15 +11,41 @@ const links = [
 
 const theme = ref('light')
 const activeHref = ref('#about')
-let sectionObserver
+let ticking = false
 
-const updateActiveAtPageEnd = () => {
+const updateActiveSection = () => {
   const distanceToBottom =
     document.documentElement.scrollHeight - window.innerHeight - window.scrollY
 
   if (distanceToBottom <= 12) {
     activeHref.value = '#contact'
+    return
   }
+
+  const marker = window.scrollY + window.innerHeight * 0.42
+  let currentHref = links[0].href
+
+  links.forEach((link) => {
+    const section = document.querySelector(link.href)
+
+    if (section && section.offsetTop <= marker) {
+      currentHref = link.href
+    }
+  })
+
+  activeHref.value = currentHref
+}
+
+const handleScrollSpy = () => {
+  if (ticking) {
+    return
+  }
+
+  ticking = true
+  window.requestAnimationFrame(() => {
+    updateActiveSection()
+    ticking = false
+  })
 }
 
 const isDark = computed(() => theme.value === 'dark')
@@ -41,34 +67,14 @@ onMounted(() => {
 
   applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'))
 
-  const sections = links
-    .map((link) => document.querySelector(link.href))
-    .filter(Boolean)
-
-  sectionObserver = new IntersectionObserver(
-    (entries) => {
-      const visibleEntry = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
-
-      if (visibleEntry) {
-        activeHref.value = `#${visibleEntry.target.id}`
-      }
-    },
-    {
-      rootMargin: '-32% 0px -52% 0px',
-      threshold: [0.08, 0.24, 0.48],
-    },
-  )
-
-  sections.forEach((section) => sectionObserver.observe(section))
-  window.addEventListener('scroll', updateActiveAtPageEnd, { passive: true })
-  updateActiveAtPageEnd()
+  window.addEventListener('scroll', handleScrollSpy, { passive: true })
+  window.addEventListener('resize', updateActiveSection)
+  updateActiveSection()
 })
 
 onBeforeUnmount(() => {
-  sectionObserver?.disconnect()
-  window.removeEventListener('scroll', updateActiveAtPageEnd)
+  window.removeEventListener('scroll', handleScrollSpy)
+  window.removeEventListener('resize', updateActiveSection)
 })
 </script>
 
