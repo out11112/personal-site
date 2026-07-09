@@ -13,6 +13,15 @@ const theme = ref('light')
 const activeHref = ref('#about')
 let sectionObserver
 
+const updateActiveAtPageEnd = () => {
+  const distanceToBottom =
+    document.documentElement.scrollHeight - window.innerHeight - window.scrollY
+
+  if (distanceToBottom <= 12) {
+    activeHref.value = '#contact'
+  }
+}
+
 const isDark = computed(() => theme.value === 'dark')
 const themeLabel = computed(() => (isDark.value ? '切换为亮色模式' : '切换为暗色模式'))
 
@@ -53,10 +62,13 @@ onMounted(() => {
   )
 
   sections.forEach((section) => sectionObserver.observe(section))
+  window.addEventListener('scroll', updateActiveAtPageEnd, { passive: true })
+  updateActiveAtPageEnd()
 })
 
 onBeforeUnmount(() => {
   sectionObserver?.disconnect()
+  window.removeEventListener('scroll', updateActiveAtPageEnd)
 })
 </script>
 
