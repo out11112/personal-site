@@ -1,33 +1,20 @@
-# personal-site
+# 个人介绍网站
 
-A personal introduction website built with Vue 3, Vite, JavaScript, and CSS3.
+这是一个基于 Vue 3 和 Vite 构建的个人介绍网站，用于展示个人信息、技术能力、项目经历和联系方式。
 
-## Features
+## 项目内容
 
-- Personal profile and introduction
-- Skills and project experience sections
-- AI tool usage explanation
-- Responsive layout for desktop and common mobile widths
+- 个人基本信息与求职方向
+- 教育背景、语言能力、专业技能和办公技能
+- 技术能力展示
+- 项目经历展示
+- 联系方式与 GitHub 链接
 
-## Development
+## 技术栈
 
-```bash
-npm install
-npm run dev
-```
-
-## Build
-
-```bash
-npm run build
-```
-
-## Deployment
-
-This project is intended to be deployed on Vercel.
-
-Vercel settings:
-
-- Framework Preset: Vite
-- Build Command: `npm run build`
-- Output Directory: `dist`
+- 前端框架：Vue 3
+- 构建工具：Vite
+- 开发语言：JavaScript
+- 样式：CSS3
+- 部署平台：Vercel
+- 代码托管：GitHub
