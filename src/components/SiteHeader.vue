@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import avatarUrl from '../assets/avatar.jpg'
 
 const links = [
@@ -10,6 +10,8 @@ const links = [
 ]
 
 const theme = ref('light')
+const activeHref = ref('#about')
+let sectionObserver
 
 const isDark = computed(() => theme.value === 'dark')
 const themeLabel = computed(() => (isDark.value ? '切换为亮色模式' : '切换为暗色模式'))
@@ -29,6 +31,32 @@ onMounted(() => {
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
   applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'))
+
+  const sections = links
+    .map((link) => document.querySelector(link.href))
+    .filter(Boolean)
+
+  sectionObserver = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+      if (visibleEntry) {
+        activeHref.value = `#${visibleEntry.target.id}`
+      }
+    },
+    {
+      rootMargin: '-32% 0px -52% 0px',
+      threshold: [0.08, 0.24, 0.48],
+    },
+  )
+
+  sections.forEach((section) => sectionObserver.observe(section))
+})
+
+onBeforeUnmount(() => {
+  sectionObserver?.disconnect()
 })
 </script>
 
@@ -41,7 +69,13 @@ onMounted(() => {
 
     <div class="header-actions">
       <nav class="nav-links" aria-label="主导航">
-        <a v-for="link in links" :key="link.href" :href="link.href">
+        <a
+          v-for="link in links"
+          :key="link.href"
+          :class="{ active: activeHref === link.href }"
+          :href="link.href"
+          @click="activeHref = link.href"
+        >
           {{ link.label }}
         </a>
       </nav>
